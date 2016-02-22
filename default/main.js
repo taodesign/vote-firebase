@@ -606,5 +606,3 @@
     }
 
 })();
-
-console.log(voteList);
