@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-touch-fullscreen" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="Description" content="">
+<meta name='Keywords' content="">
+<title>投票 on firebase</title>
+<link rel="stylesheet" href="default/style.css">
+</head>
+<body>
+<!-- loading -->
+<div class="loadpage" id="loading">
+    <div class="loadicon"></div>
+</div>
+<!-- mobile html -->
+<div class="container" id="mContainer">
+    <div class="box" id="cover">
+        <div class="zt-logo">
+            <h1>投票</h1>
+        </div>
+        <div class="ptitle">
+            <h1 id="coverTitle"></h1>
+            <p id="coverDesc"></p>
+        </div>
+        <div class="actionbar">
+            <a href="#" class="btn-start" id="viewResult" style="display:none">您已投票！<em>[ 查看结果 ]</em></a>
+            <a href="#" class="btn-start" id="start">开始</a>
+        </div>
+    </div>
+    <div class="box" id="content">
+        <div class="topbar">
+            <a href='#' id="preVote" class="prepage" title="上一题"><span></span></a>
+            <div class="voteindex"><span id='voteIndex'>1</span>/<span id="voteNum"></span></div>
+        </div>
+
+        <div class="votelist" id="voteList">
+            <!-- votelist here -->
+        </div>
+    </div>
+    <div class="box" id="end">
+        <div class="endContainer">
+            <div class="vote-results">
+                <h1>投票结果</h1>
+                <p>共<em id="voteStat"></em>人参与投票</p>
+                <div id="voteRlist" class="voterlist">
+
+                </div>
+            </div>
+
+            <div class="sharewrap">
+                <a id="showSharetip" href="#">分享到朋友圈</a>
+            </div>
+
+        </div>
+    </div>
+    <!-- share tip layer -->
+    <div class='overlay-wxshare'>
+        <span class='wxmenu-tips'></span>
+        <div class='tips-text'>
+            <p>请点击右上角<br />分享到朋友圈<br />或<br />发送给朋友</p>
+        </div>
+    </div>
+</div>
+<!-- PC html -->
+<div id="pcContainer">
+    <div class="wrapper votelist-wrap">
+        <div class="zt-logo"><h1>投票</h1></div>
+        <div class="container">
+            <div class="ptitle">
+                <h1 id="pcCoverTitle"></h1>
+                <p id="pcCoverDesc"></p>
+            </div>
+            <div class="actionbar">
+                <a href="#" class="btn-start">您已投票！</a>
+            </div>
+            <div class="votelist" id="pcVoteList">
+                <!-- votelist here -->
+                <a href='#' class='submit-opt' id='submitVoteBtn'>提交投票并查看结果</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper voteresults-wrap">
+    <div class="container">
+        <div class="vote-results">
+            <h1>投票结果</h1>
+            <p>共<em id="pcVoteStat"></em>人参与投票</p>
+            <div id="pcVoteRlist" class="voterlist">
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="footer">
+        <p>a vote base on <a href="https://www.firebase.com/">firebase</a> / <a href="https://github.com/taodesign/vote-firebase" title="github">github</a></p>
+    </div>
+
+</div>
+
+<script src="default/firebase.js"></script>
+<script src="default/jquery.js"></script>
+<script src="default/main.js"></script>
+
+</body>
+</html>
